@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="format-detection" content="telephone=no">
+  <meta charset="UTF-8">
+
+  <meta name="description" content="Violate Responsive Admin Template">
+  <meta name="keywords" content="Super Admin, Admin, Template, Bootstrap">
+
+  <title>Super Admin Responsive Template</title>
+  <!-- CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/form.css" rel="stylesheet">
+  <link href="css/calendar.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/icons.css" rel="stylesheet">
+  <link href="css/generics.css" rel="stylesheet">
+</head>
+<body id="skin-blur-violate">
+<% include ../public/header.html %>
+
+<div class="clearfix"></div>
+
+<section id="main" class="p-relative" role="main">
+
+  <!-- Sidebar -->
+	<% include ../public/sidebar.html %>
+  <!-- Content -->
+  <section id="content" class="container">
+
+		<% include ../public/messagesAndNotifications.html %>
+		
+    <!-- Breadcrumb -->
+    <ol class="breadcrumb hidden-xs">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Library</a></li>
+      <li class="active">Data</li>
+    </ol>
+
+    <h4 class="page-title">个人设置</h4>
+    
+		   <!-- Horizontal -->
+                <div class="block-area" id="userEdit" ng-app="userEdit" ng-controller="userController">
+                    <h3 class="block-title col-lg-offset-1">基础注册信息</h3>
+                    <form class="form-horizontal" role="form" id="userBaseinfo" onsubmit="return false">
+                        <div class="form-group">
+                            <label for="inputName1" class="col-md-2 control-label">账户名称(account)</label>
+                            <div class="col-md-10 col-lg-6">
+                                <input type="text" class="form-control input-sm" name="account" ng-model="account" placeholder="" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label  class="col-md-2 control-label">昵称(username)</label>
+                            <div class="col-md-10 col-lg-6">
+                                <input type="text" class="form-control input-sm" name="username" ng-model="username" ng-change="editIng()" placeholder="...">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">邮箱(email)</label>
+                            <div class="col-md-10 col-lg-6">
+                                <input type="text" class="form-control input-sm" name="email" ng-model="email" ng-change="editIng()"placeholder="...">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">密码(password)</label>
+                            <div class="col-md-8 col-lg-5">
+                                <input type="text" class="form-control input-sm" name="password" ng-model="password" ng-change="editIng()"placeholder="...">
+                            </div>
+                            <div class="make-switch switch-small col-md-2 col-lg-1 col-md-offset-2  col-lg-offset-0" ng-click="passOrText()">
+                        				<input type="checkbox" name="passworkSee">
+                    					</div>
+                        </div>
+                        <div id="loginEditError" class="alert alert-success col-md-offset-2 col-md-10 col-lg-6 hide"></div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <button type="button" class="btn btn-info btn-sm m-t-10" id="editUserBase" ng-disabled="editTrue" ng-click="saveBaseEdit()">保存修改</button>
+                                <button type="button" class="btn btn-info btn-sm m-t-10" ng-disabled="editReturn" ng-click="returnEdit()">还原修改</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+             
+             <hr class="whiter m-t-20" />
+             
+								 <div class="block-area" ng-app="userInfoEdit" ng-controller="userInfoEdit" id="userInfoEdit">
+                    <h3 class="block-title col-lg-offset-1">详细信息</h3>
+                    <form class="form-horizontal" role="form" id="addUserInfo" onsubmit="return false">
+                        <div class="form-group">
+                            <label for="inputName1" class="col-md-2 control-label">您的称呼(appellation)</label>
+                            <div class="col-md-10 col-lg-6">
+                                <input type="text" class="form-control input-sm" name="appellation" ng-model="appellation"  placeholder="···" value="一捆俾斯麦">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label  class="col-md-2 control-label">联系方式(phoneNumber)</label>
+                            <div class="col-md-10 col-lg-6">
+                                <input type="text" class="form-control input-sm" name="phoneNumber" ng-model="phoneNumber" placeholder="···" value="18519023323">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label  class="col-md-2 control-label">地址(address)</label>
+                            <div class="col-md-10 col-lg-6">
+                                <input type="text" class="form-control input-sm" name="address" ng-model="address" placeholder="···" value="北京石景山">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label  class="col-md-2 control-label">QQ(it's a Penguin)</label>
+                            <div class="col-md-10 col-lg-6">
+                                <input type="text" class="form-control input-sm" name="qq" ng-model="qq" placeholder="美女必填，汉子不用填，用不到" value="121107684">
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <label  class="col-md-2 control-label">留言(leave a message)</label>
+                            <div class="col-md-10 col-lg-6">
+                                <textarea class="form-control auto-size input-sm" name="leave"  ng-model="leave" placeholder="...">一捆俾斯麦说，这东西不坏！</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label  class="col-md-2 control-label">留言仅制作者可见</label>
+                             <div class="make-switch switch-small col-md-2 col-lg-1" style="margin-left: 7px;">
+                        				<input type="checkbox" name="onlysee" ng-model="onlysee" checked="checked">
+                    					</div>
+                        </div>
+                        <div class="form-group">
+                          <label  class="col-md-2 control-label">头像上传</label>
+                            <div class="fileupload fileupload-new col-md-10 col-lg-6" data-provides="fileupload">
+                        	<div class="fileupload-preview thumbnail form-control"></div>
+	                        <div>
+	                            <span class="btn btn-file btn-alt btn-sm">
+	                              <span class="fileupload-new">选择图像</span>
+	                              <span class="fileupload-exists">修改</span>
+	                              <input type="file" id="userImg" name="userImg"/>
+	                            </span>
+	                            <a href="#" class="btn fileupload-exists btn-sm" data-dismiss="fileupload">移除</a>
+	                        </div>
+                    </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <button type="button" class="btn btn-info btn-sm m-t-10" id="editUserInfo">保存修改</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+             
+ 
+ 
+
+
+    <!-- Chat -->
+    
+  </section>
+
+  <!-- Older IE Message -->
+  <!--[if lt IE 9]>
+  <div class="ie-block">
+    <h1 class="Ops">Ooops!</h1>
+    <p>You are using an outdated version of Internet Explorer, upgrade to any of the following web browser in order to access the maximum functionality of this website. </p>
+    <ul class="browsers">
+      <li>
+        <a href="https://www.js.google.com/intl/en/chrome/browser/">
+          <img src="img/browsers/chrome.png" alt="">
+          <div>Google Chrome</div>
+        </a>
+      </li>
+      <li>
+        <a href="http://www.js.mozilla.org/en-US/firefox/new/">
+          <img src="img/browsers/firefox.png" alt="">
+          <div>Mozilla Firefox</div>
+        </a>
+      </li>
+      <li>
+        <a href="http://www.js.opera.com/computer/windows">
+          <img src="img/browsers/opera.png" alt="">
+          <div>Opera</div>
+        </a>
+      </li>
+      <li>
+        <a href="http://safari.en.softonic.com/">
+          <img src="img/browsers/safari.png" alt="">
+          <div>Safari</div>
+        </a>
+      </li>
+      <li>
+        <a href="http://windows.microsoft.com/en-us/internet-explorer/downloads/ie-10/worldwide-languages">
+          <img src="img/browsers/ie.png" alt="">
+          <div>Internet Explorer(New)</div>
+        </a>
+      </li>
+    </ul>
+    <p>Upgrade your browser for a Safer and Faster web experience. <br/>Thank you for your patience...</p>
+  </div>
+  <![endif]-->
+</section>
+<% include ../public/publicLoadJs.html %>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<div class="tile">
+	<h2 class="tile-title">当前信息来源</h2>
+	<div class="p-5 photos">
+		<div class="col-xs-3" ng-repeat = "x in modelList" ng-click="addNewMoive(x.toUrl)">
+			<img class="animated img-rounded" title="{{ x.htmlName }}"  ng-src="img/httpform/{{ x.htmlLogoUrlClass }}" err-src="" alt="">
+		</div>
+		<div class="col-xs-3 img-rounded add-html-box">
+			<img class="animated col-md-6" title="" src="img/icon/add@2x.png" alt="" data-toggle="modal">
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>

@@ -1,0 +1,19 @@
+<!--<div ng-transclude></div>
+-->
+<form class="box tile animated active" id="box-login" method="post" action="/login" onsubmit="return false">
+	<h2 class="m-t-0 m-b-15">Nodejs用户登录</h2>
+		<input type="text" class="login-control m-b-10" name="account" placeholder="请输入用户账户名称" value="" ng-model="userBase.account">
+	<input type="password" class="login-control" name="password" placeholder="输入密码" value=""  ng-model="userBase.password">
+	<div class="checkbox m-b-20">
+		<label ng-click="autoToggle()">
+			<input type="checkbox" id="autologin" ng-model="autologin"> 记住我的登录状态
+		</label>
+	</div>
+	<div id="loginerror" class="alert alert-success hide"></div>
+	<button class="btn btn-sm m-r-5" ng-click="userLogin()">登录</button>
+
+	<small>
+        <a ui-sref="loginindex.Register">没有账号，马上注册！</a> or
+        <a ui-sref="loginindex.findPassword">忘记密码，点击找回</a>
+    </small>
+</form>

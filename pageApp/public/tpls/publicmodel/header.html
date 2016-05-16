@@ -1,0 +1,37 @@
+
+  <a id="menu-toggle" ng-click="menuToggle()" menuToggle></a>
+  <a class="logo pull-left" href="">ANMB后台系统</a>
+
+  <div class="media-body">
+    <div class="media" id="top-menu">
+      <div class="pull-left tm-icon">
+        <a data-drawer="messages" class="drawer-toggle"  ng-click="msgBoxIn($event)">
+          <i class="sa-top-message"></i>
+          <i class="n-count animated" id="msgListNum">0</i>
+          <span>最新消息</span>
+        </a>
+      </div>
+      <div class="pull-left tm-icon">
+        <a data-drawer="notifications" class="drawer-toggle" href="javascript:" ng-click="msgBoxIn($event)">
+          <i class="sa-top-updates" data-drawer="notifications"></i>
+          <i class="n-count animated" data-drawer="notifications">9</i>
+          <span data-drawer="notifications">错误反馈</span>
+        </a>
+      </div>
+
+
+
+      <div id="time" class="pull-right">
+        <span id="hours"></span>
+        :
+        <span id="min"></span>
+        :
+        <span id="sec"></span>
+      </div>
+
+      <div class="media-body">
+        <input type="text" class="main-search">
+      </div>
+    </div>
+  </div>
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../css/form.css">
+		<link rel="stylesheet" href="../../css/style.css">
+		<link rel="stylesheet" href="../../css/animate.css">
+		<link rel="stylesheet" href="../../css/generics.css">
+		<link rel="stylesheet" href="../..//icons.css">
+	</head>
+
+	<body>
+		<div ng-click="close($event)" ng-style="{'z-index': 1050 + index*10, display: 'block'}" ng-class="{in: animate}" class="modal fade  in" tabindex="-1" modal-window="" index="0" style="z-index: 1050; display: block;">
+			<div class="modal-dialog">
+				<div ng-transclude="" class="modal-content">
+					<div class="modal-header ng-scope">
+						<h3>火锅英雄</h3>
+					</div>
+					<div class="modal-body ng-scope clearfix">
+						<div class="col-md-3 col-xs-3">
+							<img class="col-md-12 p-0" src="http://map.baidu.com/maps/services/thumbnails?width=160&amp;src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fmovie%2Fpic%2Fitem%2Fb7003af33a87e950851f61cf17385343fbf2b40d.jpg&amp;quality=90">
+						</div>
+						<div class="col-md-8 col-xs-7">
+							<div class="content">
+								<h4><a target="_blank" class="ng-binding">火锅英雄</a></h4>
+								<div class="de">
+									<p class="ng-binding"><span>导演：</span>杨庆</p>
+									<p class="ng-binding"><span>主演：</span>陈坤,白百何,秦昊,喻恩泰,王彦霖,尹昉,李九霄,张亦弛,凌琳,陈诺,干豇豆,陈卫,唐佐辉,夏天,润土,牟珊珊,宋汶芯,杨滨霞,王英明,李修胜,薛飞卫,张煌,谢晓奇,Cho Donghyuk,郭与行,沈小兰,汪雪冰,任敏,庞宗林,周峥琦,张文杰</p>
+									<p class="ng-binding"><span>类型：</span>剧情,犯罪</p>
+									<ul class="p-l-0 clearfix">
+										<li class="pull-left ng-binding"><span>国家：</span>中国</li>
+										<li class="pull-left p-l-5 ng-binding"><span>首映：</span>2016-04-01</li>
+										<li class="pull-left p-l-5 ng-binding"><span>片长：</span>95分钟</li>
+									</ul>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer ng-scope">
+						<button ng-click="ok()" class="btn btn-primary">OK</button>
+						<button ng-click="cancel()" class="btn btn-warning">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

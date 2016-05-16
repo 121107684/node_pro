@@ -1,0 +1,35 @@
+<div class=" col-md-12 w-cinema-info-list">
+	<div class="media w-cinema-info-list" ng-repeat="i in cinemaList">
+		<div class="media-body">
+			<div class="ci-col ci-basic">
+				<div class="clearfix">
+					<h4 class="cib-name m-0">
+						<a href="#">{{ i.name }}</a>
+					</h4>
+					<div class="cib-rate">
+						<div class="rate-grade">
+							<span class="rate-int">3</span>
+							<span class="rate-decimal">.5</span>
+						</div>
+						<div class="rate-star">
+							<div class="star ugc-star-wrap ">
+								<div class="star ugc-star-grade" style="width: 49px;"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cib-address">
+					<!--<a mon="element=map" data-buy-type="map" href="###">查看地图</a>-->
+					<p class="m-b-0">{{ i.address }}</p>
+				</div>
+				<div class="cib-tel">
+					电话：{{ i.phone }}
+				</div>
+			</div>
+		</div>
+		<div class="list-options">
+			<button class="btn btn-sm">查看/编辑</button>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta name="format-detection" content="telephone=no">
+        <meta charset="UTF-8">
+
+        <meta name="description" content="Violate Responsive Admin Template">
+        <meta name="keywords" content="Super Admin, Admin, Template, Bootstrap">
+
+        <title>Super Admin Responsive Template</title>
+            
+        <!-- CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/animate.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/form.css" rel="stylesheet">
+        <link href="css/calendar.css" rel="stylesheet">
+        <link href="css/media-player.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/icons.css" rel="stylesheet">
+        <link href="css/generics.css" rel="stylesheet"> 
+    </head>
+    <body id="skin-blur-violate">
+        
+        <% include ../public/header.html %>
+        
+        <div class="clearfix"></div>
+        
+        <section id="main" class="p-relative" role="main">
+            
+            <!-- Sidebar -->
+            <% include ../public/sidebar.html %>
+            <!-- Content -->
+            <section id="content" class="container">
+            
+                <% include ../public/messagesAndNotifications.html %>
+                
+                <!-- Breadcrumb -->
+                <ol class="breadcrumb hidden-xs">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Library</a></li>
+                    <li class="active">Data</li>
+                </ol>
+                
+                <h4 class="page-title">用户列表</h4>
+                <!-- Table Hover -->
+                <div class="block-area" id="tableHover">
+                    <h3 class="block-title">Table with Hover Style</h3>
+                    <div class="table-responsive overflow">
+                        <table class="table table-bordered table-hover tile table-striped">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>账号</th>
+                                    <th>用户名</th>
+                                    <th>email</th>
+                                    <th>密码</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            	<%
+									allUsers.forEach(function(allUser, index) { 
+								%> 
+                                <tr>
+                                    <td><%= index %></td>
+                                    <td><%= allUser.account %> </td>
+                                    <td><%= allUser.username %> </td>
+                                    <td><%= allUser.email %></td>
+                                    <td><%= allUser.password %></td>
+                                </tr>
+                               	<%}) %> 
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <br/><br/>
+        </section>
+        
+      <!-- Javascript Libraries -->
+        <!-- jQuery 
+        <script src="js/jquery.min.js"></script> <!-- jQuery Library -->
+        
+        <!-- Bootstrap 
+        <script src="js/bootstrap.min.js"></script>
+        
+        <!-- UX 
+        <script src="js/scroll.min.js"></script> <!-- Custom Scrollbar -->
+        
+        <!-- Other 
+        <script src="js/calendar.min.js"></script> <!-- Calendar -->
+        <!--<script src="js/feeds.min.js"></script>--> <!-- News Feeds -->
+        
+        
+        <!-- All JS functions -->
+        <!--<script src="js/functions.js"></script>-->
+        <% include ../public/publicLoadJs.html %>
+    </body>
+</html>
+

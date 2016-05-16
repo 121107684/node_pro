@@ -1,0 +1,26 @@
+<div  class="media col-md-6 moviesList" ng-repeat="i in moviesList">
+	<div class="col-md-4 col-xs-4">
+		<img class="col-md-12 p-0" ng-src="{{i.movieImg | imgstr:$event}}" src="img/images-doc/noimg.png"/>
+	</div>
+	<div class="col-md-8 col-xs-7">
+		<div class="content">
+			<h4><a target="_blank">{{ i.movieTitle}}</a></h4>
+			<div class="de">
+				<p class="t-overflow"><span>导演：</span>{{ i.movieDirector }}</p>
+				<p class="t-overflow"><span>主演：</span>{{ i.movieProtagonist | arrToStr }}</p>
+				<p class="t-overflow"><span>类型：</span>{{ i.movieType | arrToStr }}</p>
+				<ul class="p-l-0 clearfix">
+					<li class="pull-left"><span>国家：</span>{{ i.movieCountry }}</li>
+					<li class="pull-left p-l-5"><span>首映：</span>{{ i.movieFirst }}</li>
+					<li class="pull-left p-l-5"><span>片长：</span>{{ i.movieLong }}</li>
+				</ul>
+				
+			</div>
+		</div>
+	</div>
+	<div class="list-options">
+       <button type="button" class="btn btn-sm" ng-click="infoEdit(i._id,'lg')">编辑/详情</button>
+       <button type="button" class="btn btn-sm" ng-click="delMoive(i._id)">删除</button>
+    </div>
+    
+</div>

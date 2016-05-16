@@ -1,0 +1,12 @@
+<form class="box animated tile active" id="box-register" method="post" action="/register" onsubmit="return false">
+	<h2 class="m-t-0 m-b-15">注册</h2>
+	<input type="text" class="login-control m-b-10" placeholder="请输入用户账户名称" name="account" value="baiyang">
+	<input type="text" class="login-control m-b-10" placeholder="登录用户昵称" name="username" value="白杨">
+	<input type="email" class="login-control m-b-10" placeholder="邮箱地址" name="email" value="121107684@qq.com">
+	<input type="password" class="login-control m-b-10" placeholder="密码" name="password" value="baiyangby311">
+	<input type="password" class="login-control m-b-20" placeholder="再次输入密码" name="confirmPassword" value="baiyangby311">
+	<div id="registererror" class="alert alert-danger hide"></div>
+	<button id="register" class="btn btn-sm m-r-5">注册</button>
+
+	<small><a ui-sref="loginindex.login">已经有一个帐户？</a></small>
+</form>

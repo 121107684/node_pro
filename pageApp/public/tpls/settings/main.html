@@ -1,0 +1,103 @@
+<!-- Horizontal -->
+<div class="block-area" id="userEdit" ng-controller="userController">
+	<h3 class="block-title col-lg-offset-1">基础注册信息</h3>
+	<form class="form-horizontal" role="form" id="userBaseinfo" onsubmit="return false">
+		<div class="form-group">
+			<label for="inputName1" class="col-md-2 control-label">账户名称(account)</label>
+			<div class="col-md-10 col-lg-6">
+				<input type="text" class="form-control input-sm" name="account" ng-model="userBaseinfo.account" placeholder="" disabled>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-2 control-label">昵称(username)</label>
+			<div class="col-md-10 col-lg-6">
+				<input type="text" class="form-control input-sm" name="username" ng-model="userBaseinfo.username" ng-change="editIng()" placeholder="...">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-2 control-label">邮箱(email)</label>
+			<div class="col-md-10 col-lg-6">
+				<input type="text" class="form-control input-sm" name="email" ng-model="userBaseinfo.email" ng-change="editIng()" placeholder="...">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-2 control-label">密码(password)</label>
+			<div class="col-md-8 col-lg-5">
+				<input type="text" class="form-control input-sm" name="password" ng-model="userBaseinfo.password" ng-change="editIng()" placeholder="...">
+			</div>
+			<div class="make-switch switch-small col-md-2 col-lg-1 col-md-offset-2  col-lg-offset-0" ng-click="passOrText()">
+				<input type="checkbox" name="passworkSee">
+			</div>
+		</div>
+		<div id="loginEditError" class="alert alert-success col-md-offset-2 col-md-10 col-lg-6 hide"></div>
+		<div class="form-group">
+			<div class="col-md-offset-2 col-md-10">
+				<button type="button" class="btn btn-info btn-sm m-t-10" id="editUserBase" ng-disabled="editTrue" ng-click="saveBaseEdit()">保存修改</button>
+				<button type="button" class="btn btn-info btn-sm m-t-10" ng-disabled="editReturn" ng-click="returnEdit()">还原修改</button>
+			</div>
+		</div>
+	</form>
+</div>
+
+<hr class="whiter m-t-20" />
+
+<div class="block-area" ng-controller="userInfoEdit" id="userInfoEdit">
+	<h3 class="block-title col-lg-offset-1">详细信息</h3>
+	<form class="form-horizontal" role="form" id="addUserInfo" onsubmit="return false">
+		<div class="form-group">
+			<label for="inputName1" class="col-md-2 control-label">您的称呼(appellation)</label>
+			<div class="col-md-10 col-lg-6">
+				<input type="text" class="form-control input-sm" name="appellation" ng-model="appellation" placeholder="···">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-2 control-label">联系方式(phoneNumber)</label>
+			<div class="col-md-10 col-lg-6">
+				<input type="text" class="form-control input-sm" name="phoneNumber" ng-model="phoneNumber" placeholder="···" >
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-2 control-label">地址(address)</label>
+			<div class="col-md-10 col-lg-6">
+				<input type="text" class="form-control input-sm" name="address" ng-model="address" placeholder="···">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-2 control-label">QQ(it's a Penguin)</label>
+			<div class="col-md-10 col-lg-6">
+				<input type="text" class="form-control input-sm" name="qq" ng-model="qq" placeholder="美女必填，汉子不用填，用不到">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-2 control-label">留言(leave a message)</label>
+			<div class="col-md-10 col-lg-6">
+				<textarea class="form-control auto-size input-sm" name="leave" ng-model="leave" placeholder="..."></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-2 control-label">留言仅制作者可见</label>
+			<div class="make-switch switch-small col-md-2 col-lg-1" style="margin-left: 7px;">
+				<input type="checkbox" name="onlysee" ng-model="onlysee" checked="checked">
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-2 control-label">头像上传</label>
+			<div class="fileupload fileupload-new col-md-10 col-lg-6" data-provides="fileupload">
+				<div class="fileupload-preview thumbnail form-control"></div>
+				<div>
+					<span class="btn btn-file btn-alt btn-sm">
+	                   <span class="fileupload-new">选择图像</span>
+					<span class="fileupload-exists">修改</span>
+					<input type="file" id="userImg" name="userImg" />
+					</span>
+					<a href="#" class="btn fileupload-exists btn-sm" data-dismiss="fileupload">移除</a>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-md-offset-2 col-md-10">
+				<button type="button" class="btn btn-info btn-sm m-t-10" id="editUserInfo">保存修改</button>
+			</div>
+		</div>
+	</form>
+</div>

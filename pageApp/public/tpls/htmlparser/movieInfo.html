@@ -1,0 +1,47 @@
+
+					<div class="modal-header col-md-12 clearfix">
+						<h4 class="col-md-6">电影名称</h4>
+						<div class="btn-group col-md-6 m-t-10">
+							<a  class="btn btn-sm btn-alt col-md-4" ng-click="changInfo('mInfp')">详情</a>
+							<a class="btn btn-sm btn-alt col-md-4" ng-click="changInfo('imgList')" href="javascript:void(0)">电影海报</a>
+							<a class="btn btn-sm btn-alt col-md-4" ng-click="changInfo('cList')" href="javascript:void(0)">放映影院</a>
+						</div>
+					</div>
+					<div class="modal-body col-md-12 clearfix movieModelBody">
+						<div class="col-md-12" ng-class="{active: 'mInfp'==modelShow}">
+							<div class="col-md-3 col-xs-4">
+								<img src="http://map.baidu.com/maps/services/thumbnails?width=200&src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fmovie%2Fpic%2Fitem%2Ffcfaaf51f3deb48f7d750e47f71f3a292df5780f.jpg&quality=100" class="col-md-12 p-0">
+							</div>
+							<div class="col-md-9 col-xs-7">
+								<div class="content">
+									<div class="de">
+										<div class="col-md-8 p-0">
+											<h4 class="m-t-5">电影名称</h4>
+											<h5>剧情/剧情/剧情<span class="p-l-5 p-r-5">|</span>日本<span class="p-l-5 p-r-5">|</span>2015-6-15<span class="p-l-5 p-r-5">|</span>117分钟</h5>
+										</div>
+										<div class="col-md-4">
+											<h2 class="text-right">9.0</h2>
+										</div>
+										<div class="clearfix"></div>
+										<h5 class="m-t-0 fl"><b>导演：</b>土井裕泰</h5>
+										<h5 class="l-150 fl"><b class="">主演：</b>有村架纯,吉田羊,田中哲司,野村周平,伊藤淳史,安田显,阿部菜渚美,松井爱莉,县森鱼,中村靖日,矢岛健一,Nanami Abe,Kokoro Okuda,藏下穗波,峰村理恵,Yûhei Ohuchida,山田望叶,大内田悠平,奥田心,山新,赵铭洲,边江,路知行,廖菁,毛毛头</h5>
+										<p>美国队长史蒂夫·罗杰斯（克里斯·埃文斯ChrisEvans饰）带领着全新组建的复仇者联盟，继续维护世界和平。然而，一次执行任务时联盟成员不小心造成大量平民伤亡，从而激发政展开治压力，政府决定通过一套监管系统来管理和领导复仇者联盟。联盟内部因此分裂为两派——一方由史蒂夫·罗杰斯领导，他主张维护成员自由，在免受政府干扰的情况下保护世界；另一方则追随托尼·斯塔克（小罗伯特·唐尼RobertDowneyJr.饰），他令人意外地决定支持政府的监管和责任制体系。神秘莫测的巴基（塞巴斯蒂安·斯坦SebastianStan饰）似乎成为内战的关键人物……</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12" ng-class="{active: 'imgList'==modelShow}">
+							<h2>海报列表</h2>
+						</div>
+						<div class="col-md-12" ng-class="{active: 'cList'==modelShow}">
+							<h2>影院列表</h2>
+							
+						</div>
+					</div>
+					<div class="modal-footer col-md-12">
+						<button ng-click="ok()" class="btn btn-primary">确定</button>
+						<button ng-click="cancel()" class="btn btn-warning">关闭</button>
+					</div>
+					<div class="clearfix">
+						
+					</div>

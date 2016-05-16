@@ -1,0 +1,36 @@
+<!-- Table Hover -->
+<div class="block-area" id="tableHover">
+	<h3 class="block-title">所有用户基本信息展示</h3>
+	<div class="table-responsive overflow">
+		<table class="table table-bordered table-hover tile table-striped">
+			<thead>
+				<tr>
+					<th>No.</th>
+					<th>账号</th>
+					<th>用户名</th>
+					<th>email</th>
+					<th>密码</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat=" x in userlist">
+					<td>
+						{{ $index }}
+					</td>
+					<td>
+						{{ x.account }}
+					</td>
+					<td>
+						{{ x.username }}
+					</td>
+					<td>
+						{{ x.email }}
+					</td>
+					<td>
+						{{ x.password }}
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

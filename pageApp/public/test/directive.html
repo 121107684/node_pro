@@ -1,0 +1,59 @@
+<html ng-app="ui.bootstrap.demo">
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+		<script src="js/angular.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ui-bootstrap-tpls-1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular-animate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular-sanitize.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular-touch.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/button.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/fastclick.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/FileSaver.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ga.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jszip.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/plunker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/plusone.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/rainbow.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/rainbow-generic.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/rainbow-html.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/rainbow-javascript.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/smoothscroll-angular-custom.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/uglifyjs.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ui-bootstrap-tpls-1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/widgets.js" type="text/javascript" charset="utf-8"></script>
+		<script src="test.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body ng-controller="MainCtrl">
+
+		<div ng-controller="ModalDemoCtrl">
+			<script type="text/ng-template" id="myModalContent.html">
+				<div class="modal-header">
+					<h3 class="modal-title">I'm a modal!</h3>
+				</div>
+				<div class="modal-body">
+					<ul>
+						<li ng-repeat="item in items">
+							<a href="#" ng-click="$event.preventDefault(); selected.item = item">{{ item }}</a>
+						</li>
+					</ul>
+					Selected: <b>{{ selected.item }}</b>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+					<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+				</div>
+			</script>
+
+			<button type="button" class="btn btn-default" ng-click="open()">Open me!</button>
+			<button type="button" class="btn btn-default" ng-click="open('lg')">Large modal</button>
+			<button type="button" class="btn btn-default" ng-click="open('sm')">Small modal</button>
+			<button type="button" class="btn btn-default" ng-click="toggleAnimation()">Toggle Animation ({{ animationsEnabled }})</button>
+			<div ng-show="selected">Selection from a modal: {{ selected }}</div>
+		</div>
+
+	</body>
+
+</html>
